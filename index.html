@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="icon" href="./img/yummy.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark">
+
+  
+    <!-- //////////// start page /////////////// -->
+
+    <div class="show-data mt-5">
+        <div class="title text-light mb-4 text-center">
+            <h2>Home Page</h2>
+        </div>
+        <div class="container">
+            <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 gy-3" id="fixedRow">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!-- //////////// search page ////////////////// -->
+
+    <div class="searchPage mt-5 d-none">
+        <div class="title text-light mb-4 text-center">
+            <h2>Search here</h2>
+        </div>
+        <div class="container text-light">
+            <div class="row py-4 ">
+                <div class="col-md-6 ">
+                    <p>search by name</p>
+                    <input onkeyup="searchByName(this.value)" class="form-control bg-transparent text-white" type="text" >
+                </div>
+                <div class="col-md-6">
+                    <p>search by first letter</p>
+                    <input onkeyup="searchByFLetter(this.value)" maxlength="1" class="form-control bg-transparent text-white" type="text">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                
+            </div>
+        </div>
+        <div class="container searchPageContainer mt-4">
+            <div class="searchoutput  text-light">
+                
+                    <div class="row row-cols-md-3 row-cols-lg-4 gy-3 searchdiv">
+        
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <!--  ////////////  fixed menu ////////////// -->
+    <div class="menu d-flex">
+        <div class="side-menu vh-100 bg-dark  position-relative h6 text-light">
+            <ul id="links-bar">
+                <li class="mt-5 searching"><a href="#">Search</a></li>
+                <li class="mt-3 mb-3 categories"><a href="#">Categories</a></li>
+                <li class="mt-3 area"><a href="#">Area</a></li>
+                <li class="mt-3 ingredients"><a href="#">Ingredients</a></li>
+                <li class="mt-3 contact"><a href="#">Contact Us</a></li>
+                
+            </ul>
+
+
+            <div class="social position-absolute start-0 bottom-0 m-3">
+                <p>Copyright Â© 2019 All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+        <div class="side-bar">
+            <div class="text-center">
+                <img src="./img/yummy.jpg" alt="" id="hummy"><br>
+                <div id="backhome" class="d-none">
+                    <i class="fa-solid fa-up-long mt-2"></i>
+                    <p class="h5">Home</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+                
+            </div>
+            <div class="links">
+                <a href="#"><i class="fa-solid fa-globe text-dark"></i></a>
+                <a href="#"><i class="fa-solid fa-share-nodes text-dark"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ////////////// contact Page /////////////// -->
+
+    <div class="contactPage d-none mt-5">
+        <div class="title text-light mb-4 text-center">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="container">
+            <form class="row g-3 my-4" id="register">
+                <div class="col-md-6">
+                   <div class="form-data">
+                      <input type="text" id="firstName" class="form-control" placeholder="Enter Your Name" />
+                      <ul class="alert alert-danger p-0 invalid-feedback">
+                         <li>First Name Is Required</li>
+                         <li>Minmum Length 2 and Maxmum 20</li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-data">
+                       <input type="email" id="email" class="form-control" placeholder="Enter Your Email" />
+                       <ul class="alert alert-danger p-0 invalid-feedback">
+                          <li>Email Is Required</li>
+                          <li>InValid Email Formate</li>
+                       </ul>
+                    </div>
+                 </div>
+                <div class="col-md-6">
+                   <div class="form-data">
+                      <input type="number" id="lastName" class="form-control" placeholder="Enter Your Phone" />
+                      <ul class="alert alert-danger p-0 invalid-feedback">
+                         <li>Phone length is exactly 11</li>
+                         <li>Phone Prefix is with in allowed ones 010, 011, 012, 015</li>  
+                      </ul>
+                   </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-data">
+                       <input type="number" id="age" class="form-control" placeholder="Enter Your Age" />
+                       <ul class="alert alert-danger p-0 invalid-feedback">
+                          <li>Age Is Required</li>
+                          <li>Minimum 10 Maxmum 80</li>
+                       </ul>
+                    </div>
+                 </div>
+
+                
+                <div class="col-6">
+                   <div class="form-data">
+                      <input type="password" id="password" class="form-control" placeholder="Enter Password" />
+                      <ul class="alert alert-danger p-0 invalid-feedback">
+                         <li>Password Is Required</li>
+                         <li>Minimum height characters, at least one letter and one number</li>
+                      </ul>
+                   </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-data">
+                       <input type="password" id="repassword" class="form-control" placeholder="Re Enter Password" />
+                       <ul class="alert alert-danger p-0 invalid-feedback">
+                          <li>Password Is Required</li>
+                          <li>Minimum height characters, at least one letter and one number</li>
+                          <li>must match to entered password</li>
+                       </ul>
+                    </div>
+                 </div>
+                
+                <div class="col-12">
+                   <button type="submit" class="btn w-100 main-btn bg-danger disabled" id="btnRegister">Register</button>
+                   <p id="msg" class="text-center"></p>
+                </div>
+             </form>
+        </div>
+    </div>
+
+
+
+    <!-- //////////////// categories Page //////////// -->
+
+
+    <div class="categoriesPage d-none text-light mt-5">
+        <div class="title text-light mb-4 text-center">
+            <h2>Categories</h2>
+        </div>
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 gy-3 showcategories">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- ////////////  Area  Page  ////////////// -->
+
+    <div class="areaPage d-none text-light mt-5">
+        <div class="title text-light mb-4 text-center">
+            <h2>Area</h2>
+        </div>
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 gy-3 showarea">
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- //////////// Ingredients Page  //////////// -->
+
+    <div class="ingredientsPage d-none text-light mt-5">
+        <div class="title text-light mb-4 text-center">
+            <h2>Ingredients</h2>
+        </div>
+        <div class="container">
+            <div class="row row-cols-md-3 row-cols-lg-4 gy-3 showIngredients">
+
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <!-- ///////////// fixedbox for one meal details by id  -->
+
+    <div class="fixed-details w-100 vh-100 d-none overflow-y-auto" id="fixed-details">
+        <i class="fa-solid fa-xmark position-absolute" id="closefixedmeal"></i>
+        <div class="container">
+            <div class="row fixedRowOfMealId mt-3" id="fixedRowOfMealId">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ////////////// loading   /////////// -->
+
+    <div id="loading">
+        <div class="d-flex justify-content-center align-items-center w-100 vh-100">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jq.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
